@@ -10,3 +10,4 @@ C:\Users\Administrator\source\repos\HTQL\HTQL\obj\Debug\HTQL.exe
 C:\Users\Administrator\source\repos\HTQL\HTQL\obj\Debug\HTQL.pdb
 C:\Users\Administrator\source\repos\HTQL\HTQL\obj\Debug\HTQL.HoaDon.resources
 C:\Users\Administrator\source\repos\HTQL\HTQL\obj\Debug\HTQL.Login.resources
+C:\Users\Administrator\source\repos\HTQL\HTQL\obj\Debug\HTQL.Management.resources

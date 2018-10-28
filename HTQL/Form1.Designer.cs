@@ -61,6 +61,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.adminLink = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.orderBt)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -445,11 +446,23 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Danh sách sản phẩm:";
             // 
+            // adminLink
+            // 
+            this.adminLink.AutoSize = true;
+            this.adminLink.Location = new System.Drawing.Point(798, 20);
+            this.adminLink.Name = "adminLink";
+            this.adminLink.Size = new System.Drawing.Size(43, 13);
+            this.adminLink.TabIndex = 4;
+            this.adminLink.TabStop = true;
+            this.adminLink.Text = "Quản lý";
+            this.adminLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.adminLink_LinkClicked);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 612);
+            this.Controls.Add(this.adminLink);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -513,6 +526,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel adminLink;
     }
 }
 

@@ -22,7 +22,11 @@ namespace HTQL
             Login log = new Login();
             DialogResult doorlock = log.ShowDialog();
             if (doorlock == DialogResult.OK)
+            {
                 this.Enabled = true;
+            }
+            else if (doorlock == DialogResult.Ignore)
+                this.Close();
         }
     }
 }

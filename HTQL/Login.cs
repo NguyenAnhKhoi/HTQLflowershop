@@ -21,7 +21,7 @@ namespace HTQL
         {
             if (userTxt.Text == "admin" && passTxt.Text == "123")
             {
-                openManagement();
+                this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else if (String.IsNullOrEmpty(userTxt.Text) || String.IsNullOrEmpty(passTxt.Text))
@@ -32,6 +32,7 @@ namespace HTQL
 
         private void abortBtn_Click(object sender, EventArgs e)
         {
+            this.DialogResult = DialogResult.Ignore;
             this.Close();
         }
 

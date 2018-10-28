@@ -95,5 +95,11 @@ namespace HTQL
         {
 
         }
+
+        private void adminLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Management mng = new Management();
+            mng.Show();
+        }
     }
 }
