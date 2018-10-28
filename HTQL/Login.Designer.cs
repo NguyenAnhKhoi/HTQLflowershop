@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.userTxt = new System.Windows.Forms.TextBox();
+            this.passTxt = new System.Windows.Forms.TextBox();
+            this.loginBtn = new System.Windows.Forms.Button();
+            this.abortBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,37 +56,39 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Password:";
             // 
-            // textBox1
+            // userTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(98, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(189, 20);
-            this.textBox1.TabIndex = 2;
+            this.userTxt.Location = new System.Drawing.Point(98, 11);
+            this.userTxt.Name = "userTxt";
+            this.userTxt.Size = new System.Drawing.Size(189, 20);
+            this.userTxt.TabIndex = 2;
             // 
-            // textBox2
+            // passTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(98, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(189, 20);
-            this.textBox2.TabIndex = 3;
+            this.passTxt.Location = new System.Drawing.Point(98, 50);
+            this.passTxt.Name = "passTxt";
+            this.passTxt.Size = new System.Drawing.Size(189, 20);
+            this.passTxt.TabIndex = 3;
             // 
-            // button1
+            // loginBtn
             // 
-            this.button1.Location = new System.Drawing.Point(19, 86);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 52);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Đăng nhập";
-            this.button1.UseVisualStyleBackColor = true;
+            this.loginBtn.Location = new System.Drawing.Point(19, 86);
+            this.loginBtn.Name = "loginBtn";
+            this.loginBtn.Size = new System.Drawing.Size(126, 52);
+            this.loginBtn.TabIndex = 4;
+            this.loginBtn.Text = "Đăng nhập";
+            this.loginBtn.UseVisualStyleBackColor = true;
+            this.loginBtn.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // abortBtn
             // 
-            this.button2.Location = new System.Drawing.Point(161, 86);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(126, 52);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = true;
+            this.abortBtn.Location = new System.Drawing.Point(161, 86);
+            this.abortBtn.Name = "abortBtn";
+            this.abortBtn.Size = new System.Drawing.Size(126, 52);
+            this.abortBtn.TabIndex = 5;
+            this.abortBtn.Text = "Hủy";
+            this.abortBtn.UseVisualStyleBackColor = true;
+            this.abortBtn.Click += new System.EventHandler(this.abortBtn_Click);
             // 
             // Login
             // 
@@ -94,10 +96,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(299, 161);
             this.ControlBox = false;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.abortBtn);
+            this.Controls.Add(this.loginBtn);
+            this.Controls.Add(this.passTxt);
+            this.Controls.Add(this.userTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
@@ -111,9 +113,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox userTxt;
+        private System.Windows.Forms.TextBox passTxt;
+        private System.Windows.Forms.Button loginBtn;
+        private System.Windows.Forms.Button abortBtn;
     }
 }
