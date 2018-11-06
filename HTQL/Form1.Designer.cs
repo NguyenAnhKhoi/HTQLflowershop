@@ -62,6 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.adminLink = new System.Windows.Forms.LinkLabel();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.orderBt)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -457,11 +458,21 @@
             this.adminLink.Text = "Quản lý";
             this.adminLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.adminLink_LinkClicked);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(641, 90);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 5;
+            this.label6.Text = "label6";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(865, 612);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.adminLink);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -527,6 +538,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.LinkLabel adminLink;
+        private System.Windows.Forms.Label label6;
     }
 }
 

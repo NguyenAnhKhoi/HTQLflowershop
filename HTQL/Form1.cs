@@ -7,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ClassLibrary;
 
 namespace HTQL
 {
-    public interface IUseForm
-    {
-        int[] flower { get; set; }
-    }
     public partial class Menu : Form
     {
         int cntItem = 0;
         string path = Application.StartupPath + @"\Images\";
-        public int []flower { get; set; }
+        private int[] flowers = new int[4];
+        public int[] getFlower()
+        {
+            return flowers;
+        }
+
         public Menu()
         {
             InitializeComponent();
@@ -30,21 +32,13 @@ namespace HTQL
             find.Text = Convert.ToString(Convert.ToInt32(find.Text) + 1);
         }
 
-        private void lbStatusId1_TextChanged(object sender, EventArgs e)
-        {
-            string id = lbStatusId1.Name.ToString().Remove(0, lbStatusId1.Name.ToString().Length);
-            if (lbStatusId1.Text == "0")
-            {
-
-            }
-        }
-
         private void btAddId_Click(object sender, EventArgs e)
         {
             Button bt = sender as Button;
             string id = bt.Name.ToString().Remove(0, bt.Name.ToString().Length - 1);
             var find = this.Controls.Find("lbStatusId" + id.ToString(), true).FirstOrDefault();
             find.Text = Convert.ToString(Convert.ToInt32(find.Text) + 1);
+            flowers[Convert.ToInt32(id)-1]++;
             cntItem++;
             checkTotal();
         }
@@ -55,6 +49,7 @@ namespace HTQL
             string id = bt.Name.ToString().Remove(0, bt.Name.ToString().Length - 1);
             var find = this.Controls.Find(("lbStatusId" + id.ToString()), true).FirstOrDefault();
             find.Text = Convert.ToString(Convert.ToInt32(find.Text) - 1);
+            flowers[Convert.ToInt32(id)-1]--;
             cntItem--;
             checkTotal();
         }
@@ -93,7 +88,8 @@ namespace HTQL
 
         private void orderBt_Click(object sender, EventArgs e)
         {
-
+            HoaDon hd = new HoaDon(flowers);
+            hd.Show();
         }
 
         private void adminLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

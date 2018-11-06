@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listHoaDon = new System.Windows.Forms.ListView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nameTxt = new System.Windows.Forms.TextBox();
@@ -40,15 +40,20 @@
             this.phnNumTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.richResult = new System.Windows.Forms.RichTextBox();
+            this.flo1 = new System.Windows.Forms.Label();
+            this.flo2 = new System.Windows.Forms.Label();
+            this.flo3 = new System.Windows.Forms.Label();
+            this.flo4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // listView1
+            // listHoaDon
             // 
-            this.listView1.Location = new System.Drawing.Point(12, 205);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(466, 275);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listHoaDon.Location = new System.Drawing.Point(12, 205);
+            this.listHoaDon.Name = "listHoaDon";
+            this.listHoaDon.Size = new System.Drawing.Size(153, 275);
+            this.listHoaDon.TabIndex = 0;
+            this.listHoaDon.UseCompatibleStateImageBehavior = false;
             // 
             // label1
             // 
@@ -145,11 +150,60 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // richResult
+            // 
+            this.richResult.Location = new System.Drawing.Point(171, 205);
+            this.richResult.Name = "richResult";
+            this.richResult.Size = new System.Drawing.Size(307, 275);
+            this.richResult.TabIndex = 12;
+            this.richResult.Text = "";
+            // 
+            // flo1
+            // 
+            this.flo1.AutoSize = true;
+            this.flo1.Location = new System.Drawing.Point(261, 147);
+            this.flo1.Name = "flo1";
+            this.flo1.Size = new System.Drawing.Size(35, 13);
+            this.flo1.TabIndex = 13;
+            this.flo1.Text = "label7";
+            // 
+            // flo2
+            // 
+            this.flo2.AutoSize = true;
+            this.flo2.Location = new System.Drawing.Point(302, 147);
+            this.flo2.Name = "flo2";
+            this.flo2.Size = new System.Drawing.Size(35, 13);
+            this.flo2.TabIndex = 14;
+            this.flo2.Text = "label7";
+            // 
+            // flo3
+            // 
+            this.flo3.AutoSize = true;
+            this.flo3.Location = new System.Drawing.Point(343, 147);
+            this.flo3.Name = "flo3";
+            this.flo3.Size = new System.Drawing.Size(35, 13);
+            this.flo3.TabIndex = 15;
+            this.flo3.Text = "label7";
+            // 
+            // flo4
+            // 
+            this.flo4.AutoSize = true;
+            this.flo4.Location = new System.Drawing.Point(384, 147);
+            this.flo4.Name = "flo4";
+            this.flo4.Size = new System.Drawing.Size(35, 13);
+            this.flo4.TabIndex = 16;
+            this.flo4.Text = "label7";
+            // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 541);
+            this.Controls.Add(this.flo4);
+            this.Controls.Add(this.flo3);
+            this.Controls.Add(this.flo2);
+            this.Controls.Add(this.flo1);
+            this.Controls.Add(this.richResult);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.phnNumTxt);
@@ -161,10 +215,11 @@
             this.Controls.Add(this.nameTxt);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listHoaDon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "HoaDon";
             this.Text = "HoaDon";
+            this.Load += new System.EventHandler(this.HoaDon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,7 +227,7 @@
 
         #endregion
 
-        protected System.Windows.Forms.ListView listView1;
+        protected System.Windows.Forms.ListView listHoaDon;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nameTxt;
@@ -184,5 +239,10 @@
         private System.Windows.Forms.TextBox phnNumTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richResult;
+        private System.Windows.Forms.Label flo1;
+        private System.Windows.Forms.Label flo2;
+        private System.Windows.Forms.Label flo3;
+        private System.Windows.Forms.Label flo4;
     }
 }

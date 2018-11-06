@@ -12,8 +12,10 @@ namespace HTQL
 {
     public partial class HoaDon : Form
     {
-        public HoaDon()
+        int[] flowery = new int[4];
+        public HoaDon(int[] flows)
         {
+            flowery = flows;
             InitializeComponent();
         }
 
@@ -27,6 +29,14 @@ namespace HTQL
         {
             if (String.IsNullOrEmpty(nameTxt.Text) || String.IsNullOrEmpty(adrTxt.Text) || String.IsNullOrEmpty(phnNumTxt.Text))
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void HoaDon_Load(object sender, EventArgs e)
+        {
+            flo1.Text = flowery[0].ToString();
+            flo2.Text = flowery[1].ToString();
+            flo3.Text = flowery[2].ToString();
+            flo4.Text = flowery[3].ToString();
         }
     }
 }
