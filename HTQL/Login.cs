@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace HTQL
 {
@@ -19,7 +20,7 @@ namespace HTQL
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (userTxt.Text == "admin" && passTxt.Text == "123")
+            if (loginProc(userTxt.Text,passTxt.Text) == true)
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -40,6 +41,33 @@ namespace HTQL
         {
             Management mng = new Management();
             mng.Show();
+        }
+
+        private bool loginProc(string userName, string password)
+        {
+            string cnstring = @"Server = 8ZKOCVAMSQYRGRY\SQLEXPRESS; Database = FlowerShop; Integrated Security = true;";
+            SqlConnection connect = new SqlConnection(cnstring);
+            string cmdstring = "SELECT COUNT(*) FROM Employee WHERE TaiKhoan = '" + userName + "' AND MatKhau = '" + password + "'";
+            SqlCommand cmd = new SqlCommand(cmdstring, connect);
+            cmd.CommandType = CommandType.Text;
+            connect.Open();
+
+            try
+            {
+                int result = (int)cmd.ExecuteScalar();
+                if (result > 0)
+                    return true;
+                else
+                    return false;
+            }
+            catch (SqlException e)
+            {
+                throw e;
+            }
+            finally
+            {
+                connect.Close();
+            }
         }
     }
 }
