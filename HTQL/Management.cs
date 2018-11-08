@@ -32,36 +32,31 @@ namespace HTQL
         private void btEmployee_Click(object sender, EventArgs e)
         {
             ManEmployee manEm = new ManEmployee();
-            manEm.Show();
-            this.Enabled = false;
+            manEm.ShowDialog();
         }
 
         private void btProduct_Click(object sender, EventArgs e)
         {
             ManProduct manPro = new ManProduct();
-            manPro.Show();
-            this.Enabled = false;
+            manPro.ShowDialog();
         }
 
         private void btSupplier_Click(object sender, EventArgs e)
         {
             ManSupplier manSup = new ManSupplier();
-            manSup.Show();
-            this.Enabled = false;
+            manSup.ShowDialog();
         }
 
         private void btOrderDetails_Click(object sender, EventArgs e)
         {
             ManOrderDetail manOrdDet = new ManOrderDetail();
-            manOrdDet.Show();
-            this.Enabled = false;
+            manOrdDet.ShowDialog();
         }
 
         private void btOrder_Click(object sender, EventArgs e)
         {
             ManOrders manOrd = new ManOrders();
-            manOrd.Show();
-            this.Enabled = false;
+            manOrd.ShowDialog();
         }
     }
 }

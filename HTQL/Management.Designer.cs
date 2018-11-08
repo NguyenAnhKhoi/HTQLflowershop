@@ -119,7 +119,6 @@
             this.Controls.Add(this.btProduct);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btEmployee);
-            this.Enabled = false;
             this.Name = "Management";
             this.Text = "Management";
             this.Load += new System.EventHandler(this.Management_Load);
