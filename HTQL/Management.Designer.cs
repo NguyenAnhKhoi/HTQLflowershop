@@ -46,6 +46,7 @@
             this.btEmployee.TabIndex = 0;
             this.btEmployee.Text = "Quản lý nhân viên";
             this.btEmployee.UseVisualStyleBackColor = true;
+            this.btEmployee.Click += new System.EventHandler(this.btEmployee_Click);
             // 
             // label1
             // 
@@ -65,6 +66,7 @@
             this.btProduct.TabIndex = 2;
             this.btProduct.Text = "Quản lý sản phẩm";
             this.btProduct.UseVisualStyleBackColor = true;
+            this.btProduct.Click += new System.EventHandler(this.btProduct_Click);
             // 
             // btOrderDetails
             // 
@@ -74,6 +76,7 @@
             this.btOrderDetails.TabIndex = 4;
             this.btOrderDetails.Text = "Quản lý thông tin hóa đơn";
             this.btOrderDetails.UseVisualStyleBackColor = true;
+            this.btOrderDetails.Click += new System.EventHandler(this.btOrderDetails_Click);
             // 
             // btOrder
             // 
@@ -83,6 +86,7 @@
             this.btOrder.TabIndex = 3;
             this.btOrder.Text = "Quản lý hóa đơn";
             this.btOrder.UseVisualStyleBackColor = true;
+            this.btOrder.Click += new System.EventHandler(this.btOrder_Click);
             // 
             // btSupplier
             // 
@@ -92,6 +96,7 @@
             this.btSupplier.TabIndex = 5;
             this.btSupplier.Text = "Quản lý nhà cung cấp";
             this.btSupplier.UseVisualStyleBackColor = true;
+            this.btSupplier.Click += new System.EventHandler(this.btSupplier_Click);
             // 
             // groupBox1
             // 

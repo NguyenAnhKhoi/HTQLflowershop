@@ -63,19 +63,9 @@ namespace HTQL.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cart {
+        internal static System.Drawing.Bitmap order {
             get {
-                object obj = ResourceManager.GetObject("cart", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cart1 {
-            get {
-                object obj = ResourceManager.GetObject("cart1", resourceCulture);
+                object obj = ResourceManager.GetObject("order", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
