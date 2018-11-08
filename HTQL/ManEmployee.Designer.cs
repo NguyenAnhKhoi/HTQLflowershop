@@ -31,10 +31,6 @@
             this.controlPanel = new System.Windows.Forms.Panel();
             this.tablePanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.EmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.accName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EmPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btAdd = new System.Windows.Forms.Button();
@@ -47,6 +43,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.EmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.accName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.controlPanel.SuspendLayout();
             this.tablePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -78,32 +79,12 @@
             this.EmID,
             this.EmName,
             this.accName,
-            this.EmPassword});
+            this.EmPassword,
+            this.Delete});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(770, 314);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // EmID
-            // 
-            this.EmID.HeaderText = "Mã NV";
-            this.EmID.Name = "EmID";
-            // 
-            // EmName
-            // 
-            this.EmName.HeaderText = "Tên NV";
-            this.EmName.Name = "EmName";
-            this.EmName.Width = 300;
-            // 
-            // accName
-            // 
-            this.accName.HeaderText = "Tên tài khoản";
-            this.accName.Name = "accName";
-            // 
-            // EmPassword
-            // 
-            this.EmPassword.HeaderText = "Mật khẩu";
-            this.EmPassword.Name = "EmPassword";
             // 
             // groupBox1
             // 
@@ -214,6 +195,33 @@
             this.button1.Text = "Lưu";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // EmID
+            // 
+            this.EmID.HeaderText = "Mã NV";
+            this.EmID.Name = "EmID";
+            // 
+            // EmName
+            // 
+            this.EmName.HeaderText = "Tên NV";
+            this.EmName.Name = "EmName";
+            this.EmName.Width = 300;
+            // 
+            // accName
+            // 
+            this.accName.HeaderText = "Tên tài khoản";
+            this.accName.Name = "accName";
+            // 
+            // EmPassword
+            // 
+            this.EmPassword.HeaderText = "Mật khẩu";
+            this.EmPassword.Name = "EmPassword";
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Xoá";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 50;
+            // 
             // ManEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,10 +258,11 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmID;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmName;
         private System.Windows.Forms.DataGridViewTextBoxColumn accName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmPassword;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

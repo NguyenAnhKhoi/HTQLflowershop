@@ -47,6 +47,7 @@
             this.ProName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuppID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tablePanel.SuspendLayout();
             this.controlPanel.SuspendLayout();
@@ -143,7 +144,8 @@
             this.ProID,
             this.ProName,
             this.ProPrice,
-            this.SuppID});
+            this.SuppID,
+            this.Delete});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(770, 314);
@@ -203,7 +205,7 @@
             // 
             this.ProName.HeaderText = "Tên hàng hóa";
             this.ProName.Name = "ProName";
-            this.ProName.Width = 300;
+            this.ProName.Width = 250;
             // 
             // ProPrice
             // 
@@ -215,6 +217,12 @@
             this.SuppID.HeaderText = "Mã nhà cung cấp";
             this.SuppID.Name = "SuppID";
             this.SuppID.Width = 150;
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Xóa";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 50;
             // 
             // ManProduct
             // 
@@ -257,5 +265,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SuppID;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }
