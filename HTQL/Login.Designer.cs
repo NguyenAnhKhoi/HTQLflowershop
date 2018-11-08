@@ -34,45 +34,46 @@
             this.passTxt = new System.Windows.Forms.TextBox();
             this.loginBtn = new System.Windows.Forms.Button();
             this.abortBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "User: ";
+            this.label1.Text = "&User: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 48);
+            this.label2.Location = new System.Drawing.Point(12, 75);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Password:";
+            this.label2.Text = "&Password:";
             // 
             // userTxt
             // 
-            this.userTxt.Location = new System.Drawing.Point(98, 11);
+            this.userTxt.Location = new System.Drawing.Point(100, 38);
             this.userTxt.Name = "userTxt";
-            this.userTxt.Size = new System.Drawing.Size(189, 20);
+            this.userTxt.Size = new System.Drawing.Size(274, 20);
             this.userTxt.TabIndex = 2;
             // 
             // passTxt
             // 
-            this.passTxt.Location = new System.Drawing.Point(98, 50);
+            this.passTxt.Location = new System.Drawing.Point(100, 77);
             this.passTxt.Name = "passTxt";
-            this.passTxt.Size = new System.Drawing.Size(189, 20);
+            this.passTxt.Size = new System.Drawing.Size(274, 20);
             this.passTxt.TabIndex = 3;
             // 
             // loginBtn
             // 
-            this.loginBtn.Location = new System.Drawing.Point(19, 86);
+            this.loginBtn.Location = new System.Drawing.Point(12, 113);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(126, 52);
             this.loginBtn.TabIndex = 4;
@@ -82,7 +83,7 @@
             // 
             // abortBtn
             // 
-            this.abortBtn.Location = new System.Drawing.Point(161, 86);
+            this.abortBtn.Location = new System.Drawing.Point(248, 113);
             this.abortBtn.Name = "abortBtn";
             this.abortBtn.Size = new System.Drawing.Size(126, 52);
             this.abortBtn.TabIndex = 5;
@@ -90,12 +91,24 @@
             this.abortBtn.UseVisualStyleBackColor = true;
             this.abortBtn.Click += new System.EventHandler(this.abortBtn_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(12, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(361, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "*Chỉ nhân viên hoặc chủ cửa hàng được phép truy cập vào tính năng này.";
+            // 
             // Login
             // 
+            this.AcceptButton = this.loginBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(299, 161);
+            this.ClientSize = new System.Drawing.Size(386, 182);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.abortBtn);
             this.Controls.Add(this.loginBtn);
             this.Controls.Add(this.passTxt);
@@ -117,5 +130,6 @@
         private System.Windows.Forms.TextBox passTxt;
         private System.Windows.Forms.Button loginBtn;
         private System.Windows.Forms.Button abortBtn;
+        private System.Windows.Forms.Label label3;
     }
 }
