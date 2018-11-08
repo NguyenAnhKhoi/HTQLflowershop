@@ -75,6 +75,18 @@
     <Compile Include="ManEmployee.Designer.cs">
       <DependentUpon>ManEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManProduct.Designer.cs">
+      <DependentUpon>ManProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManSupplier.Designer.cs">
+      <DependentUpon>ManSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -88,6 +100,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Management.resx">
       <DependentUpon>Management.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManEmployee.resx">
+      <DependentUpon>ManEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManProduct.resx">
+      <DependentUpon>ManProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManSupplier.resx">
+      <DependentUpon>ManSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

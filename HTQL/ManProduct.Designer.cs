@@ -72,9 +72,9 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(205, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 13);
+            this.label5.Size = new System.Drawing.Size(94, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Mã nhà cung cấp";
+            this.label5.Text = "Mã nhà cung cấp:";
             // 
             // label4
             // 
