@@ -31,16 +31,9 @@
             this.btAdd = new System.Windows.Forms.Button();
             this.tablePanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SupWebsite = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +44,13 @@
             this.controlPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.OrdID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OrdCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.tablePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.controlPanel.SuspendLayout();
@@ -78,104 +78,64 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.SupID,
-            this.SupName,
-            this.SupAddress,
-            this.SupPhone,
-            this.SupWebsite,
+            this.OrdID,
+            this.OrdDate,
+            this.CustName,
+            this.OrdCost,
+            this.EmID,
             this.Delete});
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(770, 314);
             this.dataGridView1.TabIndex = 0;
             // 
-            // SupID
-            // 
-            this.SupID.HeaderText = "Mã NCC";
-            this.SupID.Name = "SupID";
-            this.SupID.Width = 75;
-            // 
-            // SupName
-            // 
-            this.SupName.HeaderText = "Tên NCC";
-            this.SupName.Name = "SupName";
-            // 
-            // SupAddress
-            // 
-            this.SupAddress.HeaderText = "Địa chỉ";
-            this.SupAddress.Name = "SupAddress";
-            this.SupAddress.Width = 300;
-            // 
-            // SupPhone
-            // 
-            this.SupPhone.HeaderText = "SĐT";
-            this.SupPhone.Name = "SupPhone";
-            // 
-            // SupWebsite
-            // 
-            this.SupWebsite.HeaderText = "Website";
-            this.SupWebsite.Name = "SupWebsite";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Xóa";
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 50;
-            // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(535, 24);
+            this.textBox5.Location = new System.Drawing.Point(555, 24);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(229, 20);
+            this.textBox5.Size = new System.Drawing.Size(140, 20);
             this.textBox5.TabIndex = 9;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(497, 27);
+            this.label6.Location = new System.Drawing.Point(506, 27);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 8;
-            this.label6.Text = "SĐT:";
+            this.label6.Text = "Mã NV:";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(497, 58);
+            this.textBox4.Location = new System.Drawing.Point(300, 58);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(267, 20);
+            this.textBox4.Size = new System.Drawing.Size(200, 20);
             this.textBox4.TabIndex = 7;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(265, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 20);
-            this.textBox3.TabIndex = 6;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(55, 58);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(381, 20);
+            this.textBox2.Size = new System.Drawing.Size(144, 20);
             this.textBox2.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(442, 61);
+            this.label5.Location = new System.Drawing.Point(205, 61);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 13);
+            this.label5.Size = new System.Drawing.Size(61, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Website:";
+            this.label5.Text = "Thành tiền:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(6, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Địa chỉ:";
+            this.label4.Text = "Tên KH:";
             // 
             // textBox1
             // 
@@ -189,9 +149,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(205, 27);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 13);
+            this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Tên NCC:";
+            this.label3.Text = "Ngày thanh toán:";
             // 
             // label1
             // 
@@ -208,9 +168,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(6, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 13);
+            this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Mã NCC:";
+            this.label2.Text = "Mã HĐ:";
             // 
             // controlPanel
             // 
@@ -233,10 +193,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.textBox5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
@@ -249,6 +209,47 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thêm/sửa";
+            // 
+            // OrdID
+            // 
+            this.OrdID.HeaderText = "Mã HĐ";
+            this.OrdID.Name = "OrdID";
+            this.OrdID.Width = 75;
+            // 
+            // OrdDate
+            // 
+            this.OrdDate.HeaderText = "Ngày thanh toán";
+            this.OrdDate.Name = "OrdDate";
+            this.OrdDate.Width = 150;
+            // 
+            // CustName
+            // 
+            this.CustName.HeaderText = "Tên KH";
+            this.CustName.Name = "CustName";
+            this.CustName.Width = 200;
+            // 
+            // OrdCost
+            // 
+            this.OrdCost.HeaderText = "Thành tiền";
+            this.OrdCost.Name = "OrdCost";
+            // 
+            // EmID
+            // 
+            this.EmID.HeaderText = "MãNV";
+            this.EmID.Name = "EmID";
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Xóa";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 50;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(300, 24);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 3;
             // 
             // ManOrders
             // 
@@ -275,16 +276,9 @@
         private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.Panel tablePanel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupAddress;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupPhone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SupWebsite;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -295,5 +289,12 @@
         private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrdID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrdDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CustName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OrdCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EmID;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
