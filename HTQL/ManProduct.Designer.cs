@@ -35,19 +35,20 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btAdd = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tablePanel = new System.Windows.Forms.Panel();
             this.controlPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.ProID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ProPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuppID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.editBt = new System.Windows.Forms.Button();
+            this.saveBt = new System.Windows.Forms.Button();
+            this.addBt = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tablePanel.SuspendLayout();
             this.controlPanel.SuspendLayout();
@@ -111,15 +112,6 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã HH:";
             // 
-            // btAdd
-            // 
-            this.btAdd.Location = new System.Drawing.Point(5, 3);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(75, 37);
-            this.btAdd.TabIndex = 1;
-            this.btAdd.Text = "Thêm";
-            this.btAdd.UseVisualStyleBackColor = true;
-            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(302, 24);
@@ -161,22 +153,14 @@
             // 
             // controlPanel
             // 
-            this.controlPanel.Controls.Add(this.button1);
-            this.controlPanel.Controls.Add(this.btAdd);
+            this.controlPanel.Controls.Add(this.editBt);
             this.controlPanel.Controls.Add(this.groupBox1);
+            this.controlPanel.Controls.Add(this.saveBt);
+            this.controlPanel.Controls.Add(this.addBt);
             this.controlPanel.Location = new System.Drawing.Point(12, 41);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(776, 137);
             this.controlPanel.TabIndex = 3;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(86, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -224,6 +208,33 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 50;
             // 
+            // editBt
+            // 
+            this.editBt.Location = new System.Drawing.Point(86, 3);
+            this.editBt.Name = "editBt";
+            this.editBt.Size = new System.Drawing.Size(75, 37);
+            this.editBt.TabIndex = 10;
+            this.editBt.Text = "Sửa";
+            this.editBt.UseVisualStyleBackColor = true;
+            // 
+            // saveBt
+            // 
+            this.saveBt.Location = new System.Drawing.Point(167, 3);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(75, 37);
+            this.saveBt.TabIndex = 9;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.UseVisualStyleBackColor = true;
+            // 
+            // addBt
+            // 
+            this.addBt.Location = new System.Drawing.Point(5, 3);
+            this.addBt.Name = "addBt";
+            this.addBt.Size = new System.Drawing.Size(75, 37);
+            this.addBt.TabIndex = 8;
+            this.addBt.Text = "Thêm";
+            this.addBt.UseVisualStyleBackColor = true;
+            // 
             // ManProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,18 +264,19 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel tablePanel;
         private System.Windows.Forms.Panel controlPanel;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ProPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn SuppID;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Button editBt;
+        private System.Windows.Forms.Button saveBt;
+        private System.Windows.Forms.Button addBt;
     }
 }

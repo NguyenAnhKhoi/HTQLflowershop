@@ -33,7 +33,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btAdd = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -42,12 +41,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.EmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmPassword = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.editBt = new System.Windows.Forms.Button();
+            this.saveBt = new System.Windows.Forms.Button();
+            this.addBt = new System.Windows.Forms.Button();
             this.controlPanel.SuspendLayout();
             this.tablePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -56,9 +57,10 @@
             // 
             // controlPanel
             // 
-            this.controlPanel.Controls.Add(this.button1);
-            this.controlPanel.Controls.Add(this.btAdd);
+            this.controlPanel.Controls.Add(this.editBt);
             this.controlPanel.Controls.Add(this.groupBox1);
+            this.controlPanel.Controls.Add(this.saveBt);
+            this.controlPanel.Controls.Add(this.addBt);
             this.controlPanel.Location = new System.Drawing.Point(12, 41);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(776, 137);
@@ -112,15 +114,6 @@
             this.label1.Size = new System.Drawing.Size(202, 29);
             this.label1.TabIndex = 2;
             this.label1.Text = "Quản lý nhân viên";
-            // 
-            // btAdd
-            // 
-            this.btAdd.Location = new System.Drawing.Point(5, 3);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(75, 37);
-            this.btAdd.TabIndex = 1;
-            this.btAdd.Text = "Thêm";
-            this.btAdd.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -186,15 +179,6 @@
             this.textBox4.Size = new System.Drawing.Size(189, 20);
             this.textBox4.TabIndex = 7;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(86, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // EmID
             // 
             this.EmID.HeaderText = "Mã NV";
@@ -222,6 +206,33 @@
             this.Delete.Name = "Delete";
             this.Delete.Width = 50;
             // 
+            // editBt
+            // 
+            this.editBt.Location = new System.Drawing.Point(84, 3);
+            this.editBt.Name = "editBt";
+            this.editBt.Size = new System.Drawing.Size(75, 37);
+            this.editBt.TabIndex = 10;
+            this.editBt.Text = "Sửa";
+            this.editBt.UseVisualStyleBackColor = true;
+            // 
+            // saveBt
+            // 
+            this.saveBt.Location = new System.Drawing.Point(165, 3);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(75, 37);
+            this.saveBt.TabIndex = 9;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.UseVisualStyleBackColor = true;
+            // 
+            // addBt
+            // 
+            this.addBt.Location = new System.Drawing.Point(3, 3);
+            this.addBt.Name = "addBt";
+            this.addBt.Size = new System.Drawing.Size(75, 37);
+            this.addBt.TabIndex = 8;
+            this.addBt.Text = "Thêm";
+            this.addBt.UseVisualStyleBackColor = true;
+            // 
             // ManEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -247,8 +258,6 @@
         private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.Panel tablePanel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btAdd;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
@@ -264,5 +273,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn accName;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmPassword;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Button editBt;
+        private System.Windows.Forms.Button saveBt;
+        private System.Windows.Forms.Button addBt;
     }
 }

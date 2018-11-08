@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btAdd = new System.Windows.Forms.Button();
+            this.addBt = new System.Windows.Forms.Button();
             this.tablePanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.controlPanel = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.saveBt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.OrdID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,20 +51,21 @@
             this.EmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.editBt = new System.Windows.Forms.Button();
             this.tablePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.controlPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btAdd
+            // addBt
             // 
-            this.btAdd.Location = new System.Drawing.Point(5, 3);
-            this.btAdd.Name = "btAdd";
-            this.btAdd.Size = new System.Drawing.Size(75, 37);
-            this.btAdd.TabIndex = 1;
-            this.btAdd.Text = "Thêm";
-            this.btAdd.UseVisualStyleBackColor = true;
+            this.addBt.Location = new System.Drawing.Point(5, 3);
+            this.addBt.Name = "addBt";
+            this.addBt.Size = new System.Drawing.Size(75, 37);
+            this.addBt.TabIndex = 1;
+            this.addBt.Text = "Thêm";
+            this.addBt.UseVisualStyleBackColor = true;
             // 
             // tablePanel
             // 
@@ -174,22 +175,23 @@
             // 
             // controlPanel
             // 
-            this.controlPanel.Controls.Add(this.button1);
-            this.controlPanel.Controls.Add(this.btAdd);
+            this.controlPanel.Controls.Add(this.editBt);
+            this.controlPanel.Controls.Add(this.saveBt);
+            this.controlPanel.Controls.Add(this.addBt);
             this.controlPanel.Controls.Add(this.groupBox1);
             this.controlPanel.Location = new System.Drawing.Point(12, 40);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(776, 137);
             this.controlPanel.TabIndex = 9;
             // 
-            // button1
+            // saveBt
             // 
-            this.button1.Location = new System.Drawing.Point(86, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 37);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Lưu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.saveBt.Location = new System.Drawing.Point(167, 3);
+            this.saveBt.Name = "saveBt";
+            this.saveBt.Size = new System.Drawing.Size(75, 37);
+            this.saveBt.TabIndex = 2;
+            this.saveBt.Text = "Lưu";
+            this.saveBt.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -251,6 +253,15 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 3;
             // 
+            // editBt
+            // 
+            this.editBt.Location = new System.Drawing.Point(86, 3);
+            this.editBt.Name = "editBt";
+            this.editBt.Size = new System.Drawing.Size(75, 37);
+            this.editBt.TabIndex = 3;
+            this.editBt.Text = "Sửa";
+            this.editBt.UseVisualStyleBackColor = true;
+            // 
             // ManOrders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -273,7 +284,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btAdd;
+        private System.Windows.Forms.Button addBt;
         private System.Windows.Forms.Panel tablePanel;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox5;
@@ -287,7 +298,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel controlPanel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button saveBt;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdID;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdDate;
@@ -296,5 +307,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn EmID;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button editBt;
     }
 }
