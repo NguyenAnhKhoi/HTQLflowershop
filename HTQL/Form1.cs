@@ -88,7 +88,7 @@ namespace HTQL
         private void orderBt_Click(object sender, EventArgs e)
         {
             HoaDon hd = new HoaDon(flowers);
-            hd.Show();
+            hd.ShowDialog();
         }
 
         private void adminLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
