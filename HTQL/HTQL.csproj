@@ -57,6 +57,12 @@
     <Compile Include="HoaDon.Designer.cs">
       <DependentUpon>HoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="itemControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="itemControl.Designer.cs">
+      <DependentUpon>itemControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HoaDon.resx">
       <DependentUpon>HoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="itemControl.resx">
+      <DependentUpon>itemControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -163,6 +172,42 @@
       <Project>{7359341f-2e3c-408b-89d4-3043bbb017aa}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CucHuongDuong.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoaGao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BongGiay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BongGon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoaPhuong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DamBut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DaLan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhuongTim.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BangLang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MaiVang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HoaDiep.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DaoHong.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

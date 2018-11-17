@@ -14,7 +14,7 @@ namespace HTQL
     {
         int cntItem = 0;
         string path = Application.StartupPath + @"\Images\";
-        private int[] flowers = new int[4];
+        private int[] flowers = new int[12];
         public int[] getFlower()
         {
             return flowers;
@@ -34,7 +34,7 @@ namespace HTQL
         private void btAddId_Click(object sender, EventArgs e)
         {
             Button bt = sender as Button;
-            string id = bt.Name.ToString().Remove(0, bt.Name.ToString().Length - 1);
+            string id = bt.Name.ToString().Remove(0, bt.Name.ToString().Length - 2);
             var find = this.Controls.Find("lbStatusId" + id.ToString(), true).FirstOrDefault();
             find.Text = Convert.ToString(Convert.ToInt32(find.Text) + 1);
             flowers[Convert.ToInt32(id)-1]++;
@@ -45,7 +45,7 @@ namespace HTQL
         private void btSubId_Click(object sender, EventArgs e)
         {
             Button bt = sender as Button;
-            string id = bt.Name.ToString().Remove(0, bt.Name.ToString().Length - 1);
+            string id = bt.Name.ToString().Remove(0, bt.Name.ToString().Length - 2);
             var find = this.Controls.Find(("lbStatusId" + id.ToString()), true).FirstOrDefault();
             find.Text = Convert.ToString(Convert.ToInt32(find.Text) - 1);
             flowers[Convert.ToInt32(id)-1]--;
@@ -56,7 +56,7 @@ namespace HTQL
         private void checkStat(object sender, EventArgs e)
         {
             Label lb = sender as Label;
-            string id = lb.Name.ToString().Remove(0, lb.Name.ToString().Length - 1);
+            string id = lb.Name.ToString().Remove(0, lb.Name.ToString().Length - 2);
             var find = this.Controls.Find(("btSubId") + id.ToString(), true).FirstOrDefault();
             if (Convert.ToInt32(lb.Text) <= 0)
                 find.Visible = false;
