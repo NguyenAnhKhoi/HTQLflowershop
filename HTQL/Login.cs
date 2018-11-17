@@ -8,19 +8,25 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using BUS;
+using DTO;
 
 namespace HTQL
 {
     public partial class Login : Form
     {
+        LoginBUS lgb;
         public Login()
         {
             InitializeComponent();
+            lgb = new LoginBUS();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (loginProc(userTxt.Text,passTxt.Text) == true)
+            Account acc = new Account(userTxt.Text, passTxt.Text);
+            bool access = lgb.Login(acc);
+            if (access == true)
             {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
@@ -43,7 +49,7 @@ namespace HTQL
             mng.Show();
         }
 
-        private bool loginProc(string userName, string password)
+        /*private bool loginProc(string userName, string password)
         {
             string cnstring = @"Server = 8ZKOCVAMSQYRGRY\SQLEXPRESS; Database = FlowerShop; Integrated Security = true;";
             SqlConnection connect = new SqlConnection(cnstring);
@@ -68,6 +74,6 @@ namespace HTQL
             {
                 connect.Close();
             }
-        }
+        }*/
     }
 }
