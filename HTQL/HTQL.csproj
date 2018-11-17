@@ -152,12 +152,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Images\16757-200.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Images\cart.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Images\order.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
