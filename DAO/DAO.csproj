@@ -42,8 +42,15 @@
   <ItemGroup>
     <None Include="DataProvider" />
     <Compile Include="DAO_Login.cs" />
+    <Compile Include="DAO_Product.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{7359341f-2e3c-408b-89d4-3043bbb017aa}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

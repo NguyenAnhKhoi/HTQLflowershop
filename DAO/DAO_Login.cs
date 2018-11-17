@@ -11,7 +11,7 @@ namespace DAO
     {
         public bool LoginDAO(string user, string pass)
         {
-            string cmdstr = "SELECT COUNT(UserName) FROM [Users] WHERE UserName = '" + user + "' AND Password = '" + pass + "'";
+            string cmdstr = "SELECT COUNT(TenNV) FROM Employee WHERE TaiKhoan = '" + user + "' AND MatKhau = '" + pass + "'";
             int output;
             try
             {

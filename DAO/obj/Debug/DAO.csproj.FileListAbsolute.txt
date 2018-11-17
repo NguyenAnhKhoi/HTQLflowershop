@@ -4,3 +4,6 @@ C:\Users\Administrator\source\repos\HTQL\DAO\obj\Debug\DAO.csprojAssemblyReferen
 C:\Users\Administrator\source\repos\HTQL\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\HTQL\DAO\obj\Debug\DAO.dll
 C:\Users\Administrator\source\repos\HTQL\DAO\obj\Debug\DAO.pdb
+C:\Users\Administrator\source\repos\HTQL\DAO\bin\Debug\DTO.dll
+C:\Users\Administrator\source\repos\HTQL\DAO\bin\Debug\DTO.pdb
+C:\Users\Administrator\source\repos\HTQL\DAO\obj\Debug\DAO.csproj.CopyComplete
