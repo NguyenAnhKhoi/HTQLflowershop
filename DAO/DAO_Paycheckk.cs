@@ -12,7 +12,7 @@ namespace DAO
     {
         public int add(Paycheck paycheck)
         {
-            string cmdstr = "INSERT INTO PayCheckk(MaHD,NgayThanhToan,TenKH,ThanhTien) VALUES ('" + paycheck.maHD + "','" + DateTime.Today + "','" + paycheck.cusName + "','" + paycheck.cost + "')";
+            string cmdstr = "INSERT INTO PayCheckk(MaHD,NgayThanhToan,TenKH,ThanhTien,MaNV) VALUES ('" + paycheck.maHD + "','" + DateTime.Today + "','" + paycheck.cusName + "','" + paycheck.cost + "','E001')";
             try
             {
                 return nonQueryExecuter(cmdstr);
