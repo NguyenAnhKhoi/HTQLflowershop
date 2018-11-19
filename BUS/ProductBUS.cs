@@ -24,7 +24,7 @@ namespace BUS
             }
         }
 
-        public List<double> getPrice()
+        public List<receipt> getPrice()
         {
             try
             {
