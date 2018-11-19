@@ -12,16 +12,29 @@ namespace BUS
     public class DetailsBUS
     {
         DAO_PaycheckkDetails detDAO = new DAO_PaycheckkDetails();
-            public int add(Details details)
+        public int add(Details details)
+        {
+            try
             {
-                try
-                {
-                    return detDAO.add(details);
-                }
-                catch (SqlException ex)
-                {
-                    throw ex;
-                }
+                return detDAO.add(details);
             }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int del(string value)
+        {
+            try
+            {
+                return detDAO.del(value);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

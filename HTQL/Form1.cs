@@ -88,7 +88,25 @@ namespace HTQL
         private void orderBt_Click(object sender, EventArgs e)
         {
             HoaDon hd = new HoaDon(flowers);
-            hd.ShowDialog();
+            DialogResult rec = hd.ShowDialog();
+            if (rec == DialogResult.None)
+            {
+                for (int i = 1; i <= 12; i++)
+                {
+                    string id;
+                    if (i < 10)
+                        id = "0" + i.ToString();
+                    else
+                        id = i.ToString();
+                    var find = this.Controls.Find(("btSubId") + id.ToString(), true).FirstOrDefault();
+                    var subFind = this.Controls.Find(("btSubId") + id.ToString(), true).FirstOrDefault();
+                    find.Text = "0";
+                    subFind.Visible = false;
+                }
+                cntItem = 0;
+                checkTotal();
+            }
+
         }
 
         private void adminLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

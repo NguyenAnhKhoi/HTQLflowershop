@@ -46,7 +46,9 @@ namespace HTQL
                 MessageBox.Show("Vui lòng điền đầy đủ thông tin!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                addRec();
+                DialogResult confirm = MessageBox.Show("Xác nhận gửi hóa đơn?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (confirm == DialogResult.Yes)
+                    addRec();
             }
         }
 
@@ -97,7 +99,12 @@ namespace HTQL
                     }
 
                 }
-                MessageBox.Show("Gửi hóa đơn thành công!", "Success", MessageBoxButtons.OK);
+                DialogResult done = MessageBox.Show("Gửi hóa đơn thành công!", "Success", MessageBoxButtons.OK);
+                if (done == DialogResult.OK)
+                {
+                    this.DialogResult = DialogResult.None;
+                    this.Close();
+                }
             }
             catch (SqlException ex)
             {

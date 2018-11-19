@@ -22,5 +22,19 @@ namespace DAO
                 throw ex;
             }
         }
+
+        public int del(string value)
+        {
+            string cmdstr = "DELETE FROM PayCheckk WHERE MaHD = '" + value + "'";
+            try
+            {
+                return nonQueryExecuter(cmdstr);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

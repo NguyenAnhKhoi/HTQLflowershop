@@ -23,5 +23,18 @@ namespace BUS
                 throw ex;
             }
         }
+
+        public int del(string value)
+        {
+            try
+            {
+                return payDAO.del(value);
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
