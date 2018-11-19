@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 
 namespace HTQL
 {
     public partial class HoaDon : Form
     {
-        int[] flowery = new int[4];
+        int[] flowery = new int[12];
+        string[] flowList = new string[12] {"Hoa huong duong", "Hoa gao", "Hoa bong giay", "Hoa bong gon", "Hoa phuong", "Dam but", "Da lan", "Phuong tim", "Bang lang", "Mai vang", "Hoa diep", "Hoa dao hong" };
+        ProductBUS proBus;
         public HoaDon(int[] flows)
         {
             flowery = flows;
+            proBus = new ProductBUS();
             InitializeComponent();
         }
 
@@ -33,6 +37,21 @@ namespace HTQL
 
         private void HoaDon_Load(object sender, EventArgs e)
         {
+            List<double> listPrice = proBus.getPrice();
+
+            for (int i = 0; i <= 12; i++)
+            {
+                if (flowery[i] > 0)
+                {
+                    ListViewItem item = new ListViewItem(flowList[i]);
+                    double cost = listPrice[i] * flowery[i];
+                    item.SubItems.Add(flowery[i].ToString());
+                    item.SubItems.Add(cost.ToString());
+
+                    listHoaDon.Items.Add(item);
+                }
+            }
+
             flo1.Text = flowery[0].ToString();
             flo2.Text = flowery[1].ToString();
             flo3.Text = flowery[2].ToString();

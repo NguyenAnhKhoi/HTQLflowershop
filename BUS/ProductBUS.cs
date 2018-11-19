@@ -24,6 +24,18 @@ namespace BUS
             }
         }
 
+        public List<double> getPrice()
+        {
+            try
+            {
+                return proDAO.GetPriceDAO();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         public int add(Product product)
         {
             try

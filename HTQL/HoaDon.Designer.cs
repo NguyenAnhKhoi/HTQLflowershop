@@ -32,28 +32,35 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nameTxt = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.adrTxt = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.phnNumTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.richResult = new System.Windows.Forms.RichTextBox();
             this.flo1 = new System.Windows.Forms.Label();
             this.flo2 = new System.Windows.Forms.Label();
             this.flo3 = new System.Windows.Forms.Label();
             this.flo4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.adrTxt = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.phnNumTxt = new System.Windows.Forms.TextBox();
+            this.proName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.amount = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // listHoaDon
             // 
+            this.listHoaDon.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.proName,
+            this.amount,
+            this.cost});
             this.listHoaDon.Location = new System.Drawing.Point(12, 205);
             this.listHoaDon.Name = "listHoaDon";
-            this.listHoaDon.Size = new System.Drawing.Size(153, 275);
+            this.listHoaDon.Size = new System.Drawing.Size(466, 275);
             this.listHoaDon.TabIndex = 0;
             this.listHoaDon.UseCompatibleStateImageBehavior = false;
+            this.listHoaDon.View = System.Windows.Forms.View.Details;
             // 
             // label1
             // 
@@ -81,54 +88,12 @@
             this.nameTxt.Size = new System.Drawing.Size(167, 20);
             this.nameTxt.TabIndex = 3;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 70);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Ngày sinh:";
-            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Location = new System.Drawing.Point(96, 63);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 96);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Địa chỉ:";
-            // 
-            // adrTxt
-            // 
-            this.adrTxt.Location = new System.Drawing.Point(96, 89);
-            this.adrTxt.Name = "adrTxt";
-            this.adrTxt.Size = new System.Drawing.Size(309, 20);
-            this.adrTxt.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 122);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Số điện thoại:";
-            // 
-            // phnNumTxt
-            // 
-            this.phnNumTxt.Location = new System.Drawing.Point(96, 115);
-            this.phnNumTxt.Name = "phnNumTxt";
-            this.phnNumTxt.Size = new System.Drawing.Size(309, 20);
-            this.phnNumTxt.TabIndex = 9;
-            this.phnNumTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // label6
             // 
@@ -149,14 +114,6 @@
             this.button1.Text = "Gửi phiếu thanh toán";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // richResult
-            // 
-            this.richResult.Location = new System.Drawing.Point(171, 205);
-            this.richResult.Name = "richResult";
-            this.richResult.Size = new System.Drawing.Size(307, 275);
-            this.richResult.TabIndex = 12;
-            this.richResult.Text = "";
             // 
             // flo1
             // 
@@ -194,6 +151,63 @@
             this.flo4.TabIndex = 16;
             this.flo4.Text = "label7";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(9, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(57, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Ngày sinh:";
+            // 
+            // adrTxt
+            // 
+            this.adrTxt.Location = new System.Drawing.Point(96, 89);
+            this.adrTxt.Name = "adrTxt";
+            this.adrTxt.Size = new System.Drawing.Size(309, 20);
+            this.adrTxt.TabIndex = 7;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(9, 96);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Địa chỉ:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Số điện thoại:";
+            // 
+            // phnNumTxt
+            // 
+            this.phnNumTxt.Location = new System.Drawing.Point(96, 115);
+            this.phnNumTxt.Name = "phnNumTxt";
+            this.phnNumTxt.Size = new System.Drawing.Size(309, 20);
+            this.phnNumTxt.TabIndex = 9;
+            this.phnNumTxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
+            // 
+            // proName
+            // 
+            this.proName.Text = "Tên sản phẩm";
+            this.proName.Width = 249;
+            // 
+            // amount
+            // 
+            this.amount.Text = "Số lượng ";
+            this.amount.Width = 104;
+            // 
+            // cost
+            // 
+            this.cost.Text = "Thành tiền";
+            this.cost.Width = 87;
+            // 
             // HoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -203,7 +217,6 @@
             this.Controls.Add(this.flo3);
             this.Controls.Add(this.flo2);
             this.Controls.Add(this.flo1);
-            this.Controls.Add(this.richResult);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.phnNumTxt);
@@ -231,18 +244,20 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nameTxt;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox adrTxt;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox phnNumTxt;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RichTextBox richResult;
         private System.Windows.Forms.Label flo1;
         private System.Windows.Forms.Label flo2;
         private System.Windows.Forms.Label flo3;
         private System.Windows.Forms.Label flo4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox adrTxt;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox phnNumTxt;
+        private System.Windows.Forms.ColumnHeader proName;
+        private System.Windows.Forms.ColumnHeader amount;
+        private System.Windows.Forms.ColumnHeader cost;
     }
 }

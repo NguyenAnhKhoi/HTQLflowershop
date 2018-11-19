@@ -42,6 +42,33 @@ namespace DAO
             }
         }
 
+        public List<double> GetPriceDAO()
+        {
+            string cmdstr = "SELECT DonGia FROM Product";
+            float sell;
+            List<double> list = new List<double>();
+            connects();
+            try
+            {
+                SqlDataReader sdr = ReaderSQLExecuter(cmdstr);
+                while (sdr.Read())
+                {
+                    sell = float.Parse(sdr[0].ToString());
+                    list.Add(sell);
+                }
+                sdr.Close();
+                return list;
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                disconnects();
+            }
+        }
+
         public int add(Product product)
         {
             string cmdstr = "INSERT INTO Product(MaHH,TenHH,DonGia,MaNCC) VALUES('" + product.ProductId + "','" + product.ProductName + "','" + product.SellingPrice + "','" + product.SupId + "')";
