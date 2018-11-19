@@ -42,19 +42,24 @@ namespace DAO
             }
         }
 
-        public List<double> GetPriceDAO()
+        public List<receipt> GetPriceDAO()
         {
-            string cmdstr = "SELECT DonGia FROM Product";
+            string cmdstr = "SELECT p.MaHH, p.TenHH, p.DonGia, j.MaHD FROM Product p, PayCheckk j";
             float sell;
-            List<double> list = new List<double>();
+            string reId, name, proId;
+            List<receipt> list = new List<receipt>();
             connects();
             try
             {
                 SqlDataReader sdr = ReaderSQLExecuter(cmdstr);
                 while (sdr.Read())
                 {
-                    sell = float.Parse(sdr[0].ToString());
-                    list.Add(sell);
+                    proId = sdr[0].ToString();
+                    name = sdr[1].ToString();
+                    sell = float.Parse(sdr[2].ToString());
+                    reId = sdr[3].ToString();
+                    receipt item = new receipt(proId, name, sell, reId);
+                    list.Add(item);
                 }
                 sdr.Close();
                 return list;
