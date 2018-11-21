@@ -30,30 +30,29 @@
         {
             this.addBt = new System.Windows.Forms.Button();
             this.tablePanel = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.controlPanel = new System.Windows.Forms.Panel();
-            this.saveBt = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgv = new System.Windows.Forms.DataGridView();
             this.OrdID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrdDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CustName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.OrdCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EmID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.empIdTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.costTxt = new System.Windows.Forms.TextBox();
+            this.cusNameTxt = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.recIdTxt = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.controlPanel = new System.Windows.Forms.Panel();
             this.editBt = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateSoldDTP = new System.Windows.Forms.DateTimePicker();
             this.tablePanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.controlPanel.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -66,36 +65,80 @@
             this.addBt.TabIndex = 1;
             this.addBt.Text = "Thêm";
             this.addBt.UseVisualStyleBackColor = true;
+            this.addBt.Click += new System.EventHandler(this.addBt_Click);
             // 
             // tablePanel
             // 
-            this.tablePanel.Controls.Add(this.dataGridView1);
+            this.tablePanel.Controls.Add(this.dgv);
             this.tablePanel.Location = new System.Drawing.Point(12, 183);
             this.tablePanel.Name = "tablePanel";
             this.tablePanel.Size = new System.Drawing.Size(776, 320);
             this.tablePanel.TabIndex = 10;
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv.AllowUserToAddRows = false;
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.OrdID,
             this.OrdDate,
             this.CustName,
             this.OrdCost,
             this.EmID,
             this.Delete});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(770, 314);
-            this.dataGridView1.TabIndex = 0;
+            this.dgv.Location = new System.Drawing.Point(3, 3);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(770, 314);
+            this.dgv.TabIndex = 0;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            this.dgv.AutoGenerateColumns = false;
             // 
-            // textBox5
+            // OrdID
             // 
-            this.textBox5.Location = new System.Drawing.Point(555, 24);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(140, 20);
-            this.textBox5.TabIndex = 9;
+            this.OrdID.DataPropertyName = "maHd";
+            this.OrdID.HeaderText = "Mã HĐ";
+            this.OrdID.Name = "OrdID";
+            this.OrdID.Width = 75;
+            // 
+            // OrdDate
+            // 
+            this.OrdDate.DataPropertyName = "dateSold";
+            this.OrdDate.HeaderText = "Ngày thanh toán";
+            this.OrdDate.Name = "OrdDate";
+            this.OrdDate.Width = 150;
+            // 
+            // CustName
+            // 
+            this.CustName.DataPropertyName = "cusName";
+            this.CustName.HeaderText = "Tên KH";
+            this.CustName.Name = "CustName";
+            this.CustName.Width = 200;
+            // 
+            // OrdCost
+            // 
+            this.OrdCost.DataPropertyName = "cost";
+            this.OrdCost.HeaderText = "Thành tiền";
+            this.OrdCost.Name = "OrdCost";
+            // 
+            // EmID
+            // 
+            this.EmID.DataPropertyName = "empId";
+            this.EmID.HeaderText = "MãNV";
+            this.EmID.Name = "EmID";
+            // 
+            // Delete
+            // 
+            this.Delete.DataPropertyName = "del";
+            this.Delete.HeaderText = "Xóa";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 50;
+            // 
+            // empIdTxt
+            // 
+            this.empIdTxt.Location = new System.Drawing.Point(555, 24);
+            this.empIdTxt.Name = "empIdTxt";
+            this.empIdTxt.Size = new System.Drawing.Size(140, 20);
+            this.empIdTxt.TabIndex = 9;
             // 
             // label6
             // 
@@ -106,19 +149,19 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "Mã NV:";
             // 
-            // textBox4
+            // costTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(300, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(200, 20);
-            this.textBox4.TabIndex = 7;
+            this.costTxt.Location = new System.Drawing.Point(300, 58);
+            this.costTxt.Name = "costTxt";
+            this.costTxt.Size = new System.Drawing.Size(200, 20);
+            this.costTxt.TabIndex = 7;
             // 
-            // textBox2
+            // cusNameTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(55, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 5;
+            this.cusNameTxt.Location = new System.Drawing.Point(55, 58);
+            this.cusNameTxt.Name = "cusNameTxt";
+            this.cusNameTxt.Size = new System.Drawing.Size(144, 20);
+            this.cusNameTxt.TabIndex = 5;
             // 
             // label5
             // 
@@ -138,12 +181,12 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Tên KH:";
             // 
-            // textBox1
+            // recIdTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 2;
+            this.recIdTxt.Location = new System.Drawing.Point(55, 24);
+            this.recIdTxt.Name = "recIdTxt";
+            this.recIdTxt.Size = new System.Drawing.Size(144, 20);
+            this.recIdTxt.TabIndex = 2;
             // 
             // label3
             // 
@@ -176,82 +219,12 @@
             // controlPanel
             // 
             this.controlPanel.Controls.Add(this.editBt);
-            this.controlPanel.Controls.Add(this.saveBt);
             this.controlPanel.Controls.Add(this.addBt);
             this.controlPanel.Controls.Add(this.groupBox1);
             this.controlPanel.Location = new System.Drawing.Point(12, 40);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(776, 137);
             this.controlPanel.TabIndex = 9;
-            // 
-            // saveBt
-            // 
-            this.saveBt.Location = new System.Drawing.Point(167, 3);
-            this.saveBt.Name = "saveBt";
-            this.saveBt.Size = new System.Drawing.Size(75, 37);
-            this.saveBt.TabIndex = 2;
-            this.saveBt.Text = "Lưu";
-            this.saveBt.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dateTimePicker1);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(3, 46);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(770, 88);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Thông tin thêm/sửa";
-            // 
-            // OrdID
-            // 
-            this.OrdID.HeaderText = "Mã HĐ";
-            this.OrdID.Name = "OrdID";
-            this.OrdID.Width = 75;
-            // 
-            // OrdDate
-            // 
-            this.OrdDate.HeaderText = "Ngày thanh toán";
-            this.OrdDate.Name = "OrdDate";
-            this.OrdDate.Width = 150;
-            // 
-            // CustName
-            // 
-            this.CustName.HeaderText = "Tên KH";
-            this.CustName.Name = "CustName";
-            this.CustName.Width = 200;
-            // 
-            // OrdCost
-            // 
-            this.OrdCost.HeaderText = "Thành tiền";
-            this.OrdCost.Name = "OrdCost";
-            // 
-            // EmID
-            // 
-            this.EmID.HeaderText = "MãNV";
-            this.EmID.Name = "EmID";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Xóa";
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 50;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(300, 24);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 3;
             // 
             // editBt
             // 
@@ -261,6 +234,32 @@
             this.editBt.TabIndex = 3;
             this.editBt.Text = "Sửa";
             this.editBt.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dateSoldDTP);
+            this.groupBox1.Controls.Add(this.empIdTxt);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.costTxt);
+            this.groupBox1.Controls.Add(this.cusNameTxt);
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.recIdTxt);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Location = new System.Drawing.Point(3, 46);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(770, 88);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Thông tin thêm/sửa";
+            // 
+            // dateSoldDTP
+            // 
+            this.dateSoldDTP.Location = new System.Drawing.Point(300, 24);
+            this.dateSoldDTP.Name = "dateSoldDTP";
+            this.dateSoldDTP.Size = new System.Drawing.Size(200, 20);
+            this.dateSoldDTP.TabIndex = 3;
             // 
             // ManOrders
             // 
@@ -272,8 +271,9 @@
             this.Controls.Add(this.controlPanel);
             this.Name = "ManOrders";
             this.Text = "ManOrders";
+            this.Load += new System.EventHandler(this.ManOrders_Load);
             this.tablePanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.controlPanel.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -286,27 +286,26 @@
 
         private System.Windows.Forms.Button addBt;
         private System.Windows.Forms.Panel tablePanel;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.DataGridView dgv;
+        private System.Windows.Forms.TextBox empIdTxt;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox costTxt;
+        private System.Windows.Forms.TextBox cusNameTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox recIdTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel controlPanel;
-        private System.Windows.Forms.Button saveBt;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DateTimePicker dateSoldDTP;
+        private System.Windows.Forms.Button editBt;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdID;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustName;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn EmID;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button editBt;
     }
 }

@@ -12,11 +12,36 @@ namespace BUS
     public class PaycheckBUS
     {
         DAO_Paycheckk payDAO = new DAO_Paycheckk();
+        public List<Paycheck> getPaycheck()
+        {
+            try
+            {
+                return payDAO.GetPaycheckDAO();
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+
         public int add(Paycheck paycheck)
         {
             try
             {
                 return payDAO.add(paycheck);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int addFull(Paycheck paycheck)
+        {
+            try
+            {
+                return payDAO.addFull(paycheck);
             }
             catch (SqlException ex)
             {
