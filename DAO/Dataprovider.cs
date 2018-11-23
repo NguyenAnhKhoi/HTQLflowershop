@@ -55,7 +55,7 @@ namespace DAO
             }
             catch (SqlException e)
             {
-                throw e;
+                return -1;
             }
             finally
             {

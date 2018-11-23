@@ -12,6 +12,17 @@ namespace BUS
     public class DetailsBUS
     {
         DAO_PaycheckkDetails detDAO = new DAO_PaycheckkDetails();
+        public List<Details> GetDetails()
+        {
+            try
+            {
+                return detDAO.GetDetailDAO();
+            }
+            catch (SqlException ex)
+            { 
+                throw ex;
+            }
+        }
         public int add(Details details)
         {
             try
