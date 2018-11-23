@@ -29,45 +29,43 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.PhoneTxt = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.webTxt = new System.Windows.Forms.TextBox();
+            this.nameTxt = new System.Windows.Forms.TextBox();
+            this.addrTxt = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.idTxt = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tablePanel = new System.Windows.Forms.Panel();
+            this.controlPanel = new System.Windows.Forms.Panel();
+            this.addBt = new System.Windows.Forms.Button();
             this.SupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupPhone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SupWebsite = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tablePanel = new System.Windows.Forms.Panel();
-            this.controlPanel = new System.Windows.Forms.Panel();
-            this.editBt = new System.Windows.Forms.Button();
-            this.saveBt = new System.Windows.Forms.Button();
-            this.addBt = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.tablePanel.SuspendLayout();
             this.controlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox5);
+            this.groupBox1.Controls.Add(this.PhoneTxt);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.webTxt);
+            this.groupBox1.Controls.Add(this.nameTxt);
+            this.groupBox1.Controls.Add(this.addrTxt);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.idTxt);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(3, 46);
@@ -77,12 +75,12 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin thêm/sửa";
             // 
-            // textBox5
+            // PhoneTxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(535, 24);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(229, 20);
-            this.textBox5.TabIndex = 9;
+            this.PhoneTxt.Location = new System.Drawing.Point(535, 24);
+            this.PhoneTxt.Name = "PhoneTxt";
+            this.PhoneTxt.Size = new System.Drawing.Size(229, 20);
+            this.PhoneTxt.TabIndex = 9;
             // 
             // label6
             // 
@@ -93,26 +91,26 @@
             this.label6.TabIndex = 8;
             this.label6.Text = "SĐT:";
             // 
-            // textBox4
+            // webTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(497, 58);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(267, 20);
-            this.textBox4.TabIndex = 7;
+            this.webTxt.Location = new System.Drawing.Point(497, 58);
+            this.webTxt.Name = "webTxt";
+            this.webTxt.Size = new System.Drawing.Size(267, 20);
+            this.webTxt.TabIndex = 7;
             // 
-            // textBox3
+            // nameTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(265, 24);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(226, 20);
-            this.textBox3.TabIndex = 6;
+            this.nameTxt.Location = new System.Drawing.Point(265, 24);
+            this.nameTxt.Name = "nameTxt";
+            this.nameTxt.Size = new System.Drawing.Size(226, 20);
+            this.nameTxt.TabIndex = 6;
             // 
-            // textBox2
+            // addrTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(55, 58);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(381, 20);
-            this.textBox2.TabIndex = 5;
+            this.addrTxt.Location = new System.Drawing.Point(55, 58);
+            this.addrTxt.Name = "addrTxt";
+            this.addrTxt.Size = new System.Drawing.Size(381, 20);
+            this.addrTxt.TabIndex = 5;
             // 
             // label5
             // 
@@ -132,12 +130,12 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Địa chỉ:";
             // 
-            // textBox1
+            // idTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(55, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 20);
-            this.textBox1.TabIndex = 2;
+            this.idTxt.Location = new System.Drawing.Point(55, 24);
+            this.idTxt.Name = "idTxt";
+            this.idTxt.Size = new System.Drawing.Size(144, 20);
+            this.idTxt.TabIndex = 2;
             // 
             // label3
             // 
@@ -157,53 +155,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mã NCC:";
             // 
-            // dataGridView1
+            // dgv
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SupID,
             this.SupName,
             this.SupAddress,
             this.SupPhone,
             this.SupWebsite,
             this.Delete});
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(770, 314);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // SupID
-            // 
-            this.SupID.HeaderText = "Mã NCC";
-            this.SupID.Name = "SupID";
-            this.SupID.Width = 75;
-            // 
-            // SupName
-            // 
-            this.SupName.HeaderText = "Tên NCC";
-            this.SupName.Name = "SupName";
-            // 
-            // SupAddress
-            // 
-            this.SupAddress.HeaderText = "Địa chỉ";
-            this.SupAddress.Name = "SupAddress";
-            this.SupAddress.Width = 300;
-            // 
-            // SupPhone
-            // 
-            this.SupPhone.HeaderText = "SĐT";
-            this.SupPhone.Name = "SupPhone";
-            // 
-            // SupWebsite
-            // 
-            this.SupWebsite.HeaderText = "Website";
-            this.SupWebsite.Name = "SupWebsite";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Xóa";
-            this.Delete.Name = "Delete";
-            this.Delete.Width = 50;
+            this.dgv.Location = new System.Drawing.Point(3, 3);
+            this.dgv.Name = "dgv";
+            this.dgv.Size = new System.Drawing.Size(770, 314);
+            this.dgv.TabIndex = 0;
+            this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            this.dgv.AutoGenerateColumns = false;
             // 
             // label1
             // 
@@ -217,7 +184,7 @@
             // 
             // tablePanel
             // 
-            this.tablePanel.Controls.Add(this.dataGridView1);
+            this.tablePanel.Controls.Add(this.dgv);
             this.tablePanel.Location = new System.Drawing.Point(12, 183);
             this.tablePanel.Name = "tablePanel";
             this.tablePanel.Size = new System.Drawing.Size(776, 320);
@@ -225,32 +192,12 @@
             // 
             // controlPanel
             // 
-            this.controlPanel.Controls.Add(this.editBt);
             this.controlPanel.Controls.Add(this.groupBox1);
-            this.controlPanel.Controls.Add(this.saveBt);
             this.controlPanel.Controls.Add(this.addBt);
             this.controlPanel.Location = new System.Drawing.Point(12, 40);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(776, 137);
             this.controlPanel.TabIndex = 6;
-            // 
-            // editBt
-            // 
-            this.editBt.Location = new System.Drawing.Point(90, 3);
-            this.editBt.Name = "editBt";
-            this.editBt.Size = new System.Drawing.Size(75, 37);
-            this.editBt.TabIndex = 12;
-            this.editBt.Text = "Sửa";
-            this.editBt.UseVisualStyleBackColor = true;
-            // 
-            // saveBt
-            // 
-            this.saveBt.Location = new System.Drawing.Point(171, 3);
-            this.saveBt.Name = "saveBt";
-            this.saveBt.Size = new System.Drawing.Size(75, 37);
-            this.saveBt.TabIndex = 11;
-            this.saveBt.Text = "Lưu";
-            this.saveBt.UseVisualStyleBackColor = true;
             // 
             // addBt
             // 
@@ -260,6 +207,45 @@
             this.addBt.TabIndex = 10;
             this.addBt.Text = "Thêm";
             this.addBt.UseVisualStyleBackColor = true;
+            this.addBt.Click += new System.EventHandler(this.addBt_Click);
+            // 
+            // SupID
+            // 
+            this.SupID.DataPropertyName = "supId";
+            this.SupID.HeaderText = "Mã NCC";
+            this.SupID.Name = "SupID";
+            this.SupID.Width = 75;
+            // 
+            // SupName
+            // 
+            this.SupName.DataPropertyName = "supName";
+            this.SupName.HeaderText = "Tên NCC";
+            this.SupName.Name = "SupName";
+            // 
+            // SupAddress
+            // 
+            this.SupAddress.DataPropertyName = "address";
+            this.SupAddress.HeaderText = "Địa chỉ";
+            this.SupAddress.Name = "SupAddress";
+            this.SupAddress.Width = 300;
+            // 
+            // SupPhone
+            // 
+            this.SupPhone.DataPropertyName = "phoneNum";
+            this.SupPhone.HeaderText = "SĐT";
+            this.SupPhone.Name = "SupPhone";
+            // 
+            // SupWebsite
+            // 
+            this.SupWebsite.DataPropertyName = "website";
+            this.SupWebsite.HeaderText = "Website";
+            this.SupWebsite.Name = "SupWebsite";
+            // 
+            // Delete
+            // 
+            this.Delete.HeaderText = "Xóa";
+            this.Delete.Name = "Delete";
+            this.Delete.Width = 50;
             // 
             // ManSupplier
             // 
@@ -271,9 +257,10 @@
             this.Controls.Add(this.controlPanel);
             this.Name = "ManSupplier";
             this.Text = "ManSupplier";
+            this.Load += new System.EventHandler(this.ManSupplier_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.tablePanel.ResumeLayout(false);
             this.controlPanel.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -283,28 +270,26 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox webTxt;
+        private System.Windows.Forms.TextBox nameTxt;
+        private System.Windows.Forms.TextBox addrTxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox idTxt;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel tablePanel;
         private System.Windows.Forms.Panel controlPanel;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox PhoneTxt;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button addBt;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupID;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupPhone;
         private System.Windows.Forms.DataGridViewTextBoxColumn SupWebsite;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private System.Windows.Forms.Button editBt;
-        private System.Windows.Forms.Button saveBt;
-        private System.Windows.Forms.Button addBt;
     }
 }

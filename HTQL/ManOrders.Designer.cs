@@ -90,6 +90,7 @@
             this.dgv.Size = new System.Drawing.Size(770, 314);
             this.dgv.TabIndex = 0;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
+            this.dgv.AutoGenerateColumns = false;
             // 
             // OrdID
             // 

@@ -50,7 +50,7 @@ namespace HTQL
 
         private void btSupplier_Click(object sender, EventArgs e)
         {
-            ManSupplier manSup = new ManSupplier();
+            ManSupplier manSup = new ManSupplier(pri);
             manSup.ShowDialog();
         }
 

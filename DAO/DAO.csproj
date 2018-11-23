@@ -44,6 +44,7 @@
     <Compile Include="DAO_Login.cs" />
     <Compile Include="DAO_PaycheckkDetails.cs" />
     <Compile Include="DAO_Product.cs" />
+    <Compile Include="DAO_Supplier.cs" />
     <Compile Include="DataProvider.cs" />
     <Compile Include="DAO_Paycheckk.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
