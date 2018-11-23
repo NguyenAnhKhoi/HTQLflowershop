@@ -101,7 +101,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btOrder);
             this.groupBox1.Controls.Add(this.btOrderDetails);
             this.groupBox1.Location = new System.Drawing.Point(12, 147);
@@ -113,18 +112,21 @@
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(510, 36);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(12, 342);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(776, 23);
             this.label2.TabIndex = 5;
             this.label2.Text = "label2";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 347);
+            this.ClientSize = new System.Drawing.Size(800, 374);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btSupplier);
             this.Controls.Add(this.btProduct);
@@ -134,7 +136,6 @@
             this.Text = "Management";
             this.Load += new System.EventHandler(this.Management_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

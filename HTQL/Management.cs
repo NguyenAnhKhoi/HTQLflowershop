@@ -27,7 +27,10 @@ namespace HTQL
             {
                 this.Enabled = true;
                 pri = log.getAllow();
-                label2.Text = pri.ToString();
+                if (pri >= 2)
+                    label2.Text = "Đang sử dụng tài khoản Admin. Mọi quyền điều khiển được cho phép.";
+                else
+                    label2.Text = "Đang sử dụng tài khoản nhân viên. Chỉ được cấp quyền đọc (Read only).";
             }
             else if (doorlock == DialogResult.Ignore)
                 this.Close();
