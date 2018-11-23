@@ -17,9 +17,11 @@ namespace HTQL
     {
         DetailsBUS detBUS;
         List<Details> list;
-        public ManOrderDetail()
+        int privilege = 0;
+        public ManOrderDetail(int pri)
         {
             detBUS = new DetailsBUS();
+            privilege = pri;
             InitializeComponent();
         }
 
@@ -32,6 +34,10 @@ namespace HTQL
         private void ManOrderDetail_Load(object sender, EventArgs e)
         {
             updateList();
+            if (privilege >= 2)
+                locking(true);
+            else
+                locking(false);
         }
 
         private void addBt_Click(object sender, EventArgs e)
@@ -59,6 +65,12 @@ namespace HTQL
                 detBUS.del(str);
                 updateList();
             }
+        }
+
+        private void locking(bool enabled)
+        {
+            addBt.Enabled = enabled;
+            dgv.Enabled = enabled;
         }
     }
 }

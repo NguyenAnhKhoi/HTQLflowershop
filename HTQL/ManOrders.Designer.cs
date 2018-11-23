@@ -48,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.controlPanel = new System.Windows.Forms.Panel();
-            this.editBt = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dateSoldDTP = new System.Windows.Forms.DateTimePicker();
             this.tablePanel.SuspendLayout();
@@ -91,7 +90,6 @@
             this.dgv.Size = new System.Drawing.Size(770, 314);
             this.dgv.TabIndex = 0;
             this.dgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellContentClick);
-            this.dgv.AutoGenerateColumns = false;
             // 
             // OrdID
             // 
@@ -218,22 +216,12 @@
             // 
             // controlPanel
             // 
-            this.controlPanel.Controls.Add(this.editBt);
             this.controlPanel.Controls.Add(this.addBt);
             this.controlPanel.Controls.Add(this.groupBox1);
             this.controlPanel.Location = new System.Drawing.Point(12, 40);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(776, 137);
             this.controlPanel.TabIndex = 9;
-            // 
-            // editBt
-            // 
-            this.editBt.Location = new System.Drawing.Point(86, 3);
-            this.editBt.Name = "editBt";
-            this.editBt.Size = new System.Drawing.Size(75, 37);
-            this.editBt.TabIndex = 3;
-            this.editBt.Text = "Sửa";
-            this.editBt.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -300,7 +288,6 @@
         private System.Windows.Forms.Panel controlPanel;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker dateSoldDTP;
-        private System.Windows.Forms.Button editBt;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdID;
         private System.Windows.Forms.DataGridViewTextBoxColumn OrdDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn CustName;

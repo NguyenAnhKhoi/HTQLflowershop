@@ -35,6 +35,7 @@
             this.btOrder = new System.Windows.Forms.Button();
             this.btSupplier = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -100,6 +101,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btOrder);
             this.groupBox1.Controls.Add(this.btOrderDetails);
             this.groupBox1.Location = new System.Drawing.Point(12, 147);
@@ -108,6 +110,15 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Hóa đơn";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(510, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "label2";
             // 
             // Management
             // 
@@ -123,6 +134,7 @@
             this.Text = "Management";
             this.Load += new System.EventHandler(this.Management_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Button btOrder;
         private System.Windows.Forms.Button btSupplier;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label2;
     }
 }

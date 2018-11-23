@@ -17,15 +17,21 @@ namespace HTQL
     {
         ProductBUS proBUS;
         List<Product> list;
-        public ManProduct()
+        int privilege = 0;
+        public ManProduct(int pri)
         {
-            InitializeComponent();
             proBUS = new ProductBUS();
+            privilege = pri;
+            InitializeComponent();
         }
 
         private void ManProduct_Load(object sender, EventArgs e)
         {
             updateList();
+            if (privilege >= 2)
+                locking(true);
+            else
+                locking(false);
         }
 
         private void updateList()
@@ -67,6 +73,12 @@ namespace HTQL
                 proBUS.del(str);
                 updateList();
             }
+        }
+
+        private void locking(bool enabled)
+        {
+            addBt.Enabled = enabled;
+            dgvPro.Enabled = enabled;
         }
     }
 }

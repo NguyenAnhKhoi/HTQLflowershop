@@ -15,5 +15,10 @@ namespace BUS
         {
             return dp.LoginDAO(acc.UserName, acc.Password);
         }
+
+        public int getAllow(string user)
+        {
+            return dp.getAllowance(user);
+        }
     }
 }

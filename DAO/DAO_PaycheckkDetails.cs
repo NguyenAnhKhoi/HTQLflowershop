@@ -60,7 +60,7 @@ namespace DAO
 
         public int del(string value)
         {
-            string cmdstr = "DELETE FROM [PayCheck Details] WHERE MaHD = '" + value + "'";
+            string cmdstr = "DELETE FROM [PayCheck Details] WHERE MaHH = '" + value + "'";
             try
             {
                 return nonQueryExecuter(cmdstr);

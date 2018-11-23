@@ -49,6 +49,11 @@ namespace HTQL
             mng.Show();
         }
 
+        public int getAllow()
+        {
+            return lgb.getAllow(userTxt.Text);
+        }
+
         /*private bool loginProc(string userName, string password)
         {
             string cnstring = @"Server = 8ZKOCVAMSQYRGRY\SQLEXPRESS; Database = FlowerShop; Integrated Security = true;";

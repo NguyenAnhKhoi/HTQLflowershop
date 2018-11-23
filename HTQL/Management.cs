@@ -12,6 +12,8 @@ namespace HTQL
 {
     public partial class Management : Form
     {
+        int pri = 0;
+
         public Management()
         {
             InitializeComponent();
@@ -24,6 +26,8 @@ namespace HTQL
             if (doorlock == DialogResult.OK)
             {
                 this.Enabled = true;
+                pri = log.getAllow();
+                label2.Text = pri.ToString();
             }
             else if (doorlock == DialogResult.Ignore)
                 this.Close();
@@ -37,7 +41,7 @@ namespace HTQL
 
         private void btProduct_Click(object sender, EventArgs e)
         {
-            ManProduct manPro = new ManProduct();
+            ManProduct manPro = new ManProduct(pri);
             manPro.ShowDialog();
         }
 
@@ -49,13 +53,13 @@ namespace HTQL
 
         private void btOrderDetails_Click(object sender, EventArgs e)
         {
-            ManOrderDetail manOrdDet = new ManOrderDetail();
+            ManOrderDetail manOrdDet = new ManOrderDetail(pri);
             manOrdDet.ShowDialog();
         }
 
         private void btOrder_Click(object sender, EventArgs e)
         {
-            ManOrders manOrd = new ManOrders();
+            ManOrders manOrd = new ManOrders(pri);
             manOrd.ShowDialog();
         }
     }

@@ -17,15 +17,21 @@ namespace HTQL
     {
         PaycheckBUS payBUS;
         List<Paycheck> pay;
-        public ManOrders()
+        int privilege;
+        public ManOrders(int pri)
         {
             payBUS = new PaycheckBUS();
+            privilege = pri;
             InitializeComponent();
         }
 
         private void ManOrders_Load(object sender, EventArgs e)
         {
             updateList();
+            if (privilege >= 2)
+                locking(true);
+            else
+                locking(false);
 
             // AdjustColumnOrder();
         }
@@ -71,6 +77,12 @@ namespace HTQL
                 payBUS.del(str);
                 updateList();
             }
+        }
+
+        private void locking(bool enabled)
+        {
+            addBt.Enabled = enabled;
+            dgv.Enabled = enabled;
         }
 
         /*  private void AdjustColumnOrder()
