@@ -44,7 +44,7 @@ namespace HTQL
         {
             string name = Encoding.Unicode.GetString(Encoding.ASCII.GetBytes(proNameTxt.Text));
             float totalcost = float.Parse(priceTxt.Text) * float.Parse(amountTxt.Text);
-            Details item = new Details(maHDTxt.Text, proIdTxt.Text, name, float.Parse(priceTxt.Text), int.Parse(amountTxt.Text), totalcost);
+            Details item = new Details(maHDTxt.Text.Trim(), proIdTxt.Text, name, float.Parse(priceTxt.Text), int.Parse(amountTxt.Text), totalcost);
             try
             {
                 int exec = detBUS.add(item);

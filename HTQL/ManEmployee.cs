@@ -54,7 +54,7 @@ namespace HTQL
 
         private void addBt_Click(object sender, EventArgs e)
         {
-            Employee item = new Employee(idTxt.Text, nameTxt.Text, accTxt.Text, passTxt.Text, int.Parse(priTxt.Text));
+            Employee item = new Employee(idTxt.Text.Trim(), nameTxt.Text, accTxt.Text, passTxt.Text, int.Parse(priTxt.Text));
             try
             {
                 int rows = empBUS.add(item);

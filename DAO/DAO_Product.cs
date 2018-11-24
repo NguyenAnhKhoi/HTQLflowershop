@@ -76,7 +76,7 @@ namespace DAO
 
         public int add(Product product)
         {
-            string cmdstr = "INSERT INTO Product(MaHH,TenHH,DonGia,MaNCC) VALUES('" + product.ProductId + "','" + product.ProductName + "','" + product.SellingPrice + "','" + product.SupId + "')";
+            string cmdstr = "INSERT INTO Product(MaHH,TenHH,DonGia,MaNCC) VALUES('" + product.ProductId.Trim() + "','" + product.ProductName + "','" + product.SellingPrice + "','" + product.SupId + "')";
             try
             {
                 return nonQueryExecuter(cmdstr);

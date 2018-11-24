@@ -45,7 +45,7 @@ namespace DAO
         }
         public int add(Employee Employee)
         {
-            string cmdstr = "INSERT INTO Employee(MaNV,TenNV,TaiKhoan,MatKhau,QuyenSuDung) VALUES ('" + Employee.emId + "','" + Employee.emName + "','" + Employee.accName + "','" + Employee.password + "','" + Employee.privilege + "')";
+            string cmdstr = "INSERT INTO Employee(MaNV,TenNV,TaiKhoan,MatKhau,QuyenSuDung) VALUES ('" + Employee.emId + "','" + Employee.emName + "','" + Employee.accName + "','" + Employee.password + "'," + Employee.privilege + ")";
             try
             {
                 return nonQueryExecuter(cmdstr);

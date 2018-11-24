@@ -48,7 +48,7 @@ namespace HTQL
             string recId, cusName, empId, dateSol;
             float cost;
 
-            recId = recIdTxt.Text;
+            recId = recIdTxt.Text.Trim();
             cusName = cusNameTxt.Text;
             dateSol = dateSoldDTP.Value.ToString();
             cost = float.Parse(costTxt.Text);

@@ -14,6 +14,8 @@ namespace UnitTests
         ProductBUS proBUS;
         PaycheckBUS payBUS;
         DetailsBUS detBUS;
+        SupplierBUS supBUS;
+        EmployeeBUS empBUS;
 
         [TestInitialize]
         public void initTest()
@@ -22,6 +24,8 @@ namespace UnitTests
             proBUS = new ProductBUS();
             payBUS = new PaycheckBUS();
             detBUS = new DetailsBUS();
+            supBUS = new SupplierBUS();
+            empBUS = new EmployeeBUS();
         }
 
         [TestMethod]
@@ -103,84 +107,126 @@ namespace UnitTests
             string supId = "WRONG";
             Product item = new Product(id, name, sell, supId);
             int actual = proBUS.add(item);
+            proBUS.del(id);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(SqlException))]
-        public void ProductManTest3()
+        public void SupplierManTest1()
         {
-            string id = "";
-            string name = "testFlower";
-            float sell = 10000;
-            string supId = "LOVEP";
-            Product item = new Product(id, name, sell, supId);
-            int actual = proBUS.add(item);
+            string id = "TESTSUPPLIER";
+            string name = "testSupplier";
+            string address = "testAddress";
+            int phone = 11111111;
+            string web = "www.testwebsite.com";
+            Supplier test = new Supplier(id, name, phone, address, web);
+            int actual = supBUS.add(test);
+            int expect = 1;
+            supBUS.del(id);
+            Assert.AreEqual(expect, actual);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(SqlException))]
-        public void ProductManTest4()
+        public void EmployeeManTest1()
+        {
+            string id = "TESTEM";
+            string name = "testEmployee";
+            string acc = "testAccount";
+            string pass = "test";
+            int pri = 0;
+            Employee test = new Employee(id, name, acc, pass, pri);
+            int actual = empBUS.add(test);
+            int expect = 1;
+            empBUS.del(id);
+            Assert.AreEqual(expect, actual);
+        }
+
+        [TestMethod]
+        public void OrderManTest1()
         {
             string id = "TEST";
-            string name = "testFlower";
-            float sell = 10000;
-            string supId = "";
-            Product item = new Product(id, name, sell, supId);
-            int actual = proBUS.add(item);
-        }
-
-        [TestMethod]
-        [ExpectedException(typeof(SqlException))]
-        public void ProductManTest5()
-        {
-            string id = "";
-            string name = "testFlower";
-            float sell = 10000;
-            string supId = "";
-            Product item = new Product(id, name, sell, supId);
-            int actual = proBUS.add(item);
-        }
-
-        [TestMethod]
-        public void ReceiptSendTest1()
-        {
-            string cusName = "testCustomer";
-            string recId = "TEST01";
-            float price = 5000;
-            string proID = "LASPEC";
-            string proName = "Bằng Lăng";
-            int amount = 2;
-            float cost = price * amount;
-            Paycheck pay = new Paycheck(recId, cusName, price);
-            Details det = new Details(recId, proID, proName, price, amount, cost);
-
-            int actual1 = payBUS.add(pay);
-            int actual2 = detBUS.add(det);
+            string day = DateTime.Today.ToString();
+            string name = "testCustomer";
+            float cost = 1;
+            string empId = "E001";
+            Paycheck test = new Paycheck(id, name, cost, day, empId);
+            int actual = payBUS.addFull(test);
             int expect = 1;
-
-            detBUS.del(recId);
-            payBUS.del(recId);
-
-            Assert.AreEqual(expect, actual1);
-            Assert.AreEqual(expect, actual2);
+            payBUS.del(id);
+            Assert.AreEqual(expect, actual);
         }
 
         [TestMethod]
         [ExpectedException(typeof(SqlException))]
-        public void ReceiptSendTest2()
+        public void OrderManTest2()
         {
-            string cusName = "testCustomer";
-            string recId = "";
-            float price = 5000;
-            string proID = "LASPEC";
-            string proName = "Bằng Lăng";
-            int amount = 2;
-            float cost = price * amount;
-            Paycheck pay = new Paycheck(recId, cusName, price);
-            Details det = new Details(recId, proID, proName, price, amount, cost);
+            string id = "TEST";
+            string day = DateTime.Today.ToString();
+            string name = "testCustomer";
+            float cost = 1;
+            string empId = "WRONG";
+            Paycheck test = new Paycheck(id, name, cost, day, empId);
+            int actual = payBUS.addFull(test);
+            payBUS.del(id);
+        }
 
-            int actual1 = payBUS.add(pay);
-            int actual2 = detBUS.add(det);
+        [TestMethod]
+        [ExpectedException(typeof(SqlException))]
+        public void OrderManTest3()
+        {
+            string id = "TEST";
+            string day = "WRONG";
+            string name = "testCustomer";
+            float cost = 1;
+            string empId = "E001";
+            Paycheck test = new Paycheck(id, name, cost, day, empId);
+            int actual = payBUS.addFull(test);
+            payBUS.del(id);
+        }
+
+        [TestMethod]
+        public void DetailManTest1()
+        {
+            string detId = "HD01";
+            string proId = "JACA";
+            string name = "test";
+            float price = 1;
+            int amount = 1;
+            float cost = 1;
+            Details test = new Details(detId, proId, name, price, amount, cost);
+            int actual = detBUS.add(test);
+            int expect = 1;
+            detBUS.del(proId);
+            Assert.AreEqual(expect, actual);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(SqlException))]
+        public void DetailManTest2()
+        {
+            string detId = "WRONG";
+            string proId = "JACA";
+            string name = "test";
+            float price = 1;
+            int amount = 1;
+            float cost = 1;
+            Details test = new Details(detId, proId, name, price, amount, cost);
+            int actual = detBUS.add(test);
+            detBUS.del(proId);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(SqlException))]
+        public void DetailManTest3()
+        {
+            string detId = "HD01";
+            string proId = "WRONG";
+            string name = "test";
+            float price = 1;
+            int amount = 1;
+            float cost = 1;
+            Details test = new Details(detId, proId, name, price, amount, cost);
+            int actual = detBUS.add(test);
+            detBUS.del(proId);
         }
     }
 }
