@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="DataProvider" />
+    <Compile Include="DAO_Employee.cs" />
     <Compile Include="DAO_Login.cs" />
     <Compile Include="DAO_PaycheckkDetails.cs" />
     <Compile Include="DAO_Product.cs" />
