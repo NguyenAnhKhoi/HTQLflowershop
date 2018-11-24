@@ -12,13 +12,15 @@ namespace DTO
         public string emName { get; set; }
         public string accName { get; set; }
         public string password { get; set; }
+        public int privilege { get; set; }
 
-        private Employee(string id, string name, string acc, string pass)
+        public Employee(string id, string name, string acc, string pass, int pri)
         {
             this.emId = id;
             this.emName = name;
             this.accName = acc;
             this.password = pass;
+            this.privilege = pri;
         }
     }
 }

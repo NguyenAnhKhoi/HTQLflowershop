@@ -53,7 +53,7 @@ namespace DAO
                 int number = (int)cmd.ExecuteScalar();
                 return number;
             }
-            catch (SqlException e)
+            catch (SqlException ex)
             {
                 return -1;
             }

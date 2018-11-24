@@ -38,7 +38,7 @@ namespace HTQL
 
         private void btEmployee_Click(object sender, EventArgs e)
         {
-            ManEmployee manEm = new ManEmployee();
+            ManEmployee manEm = new ManEmployee(pri);
             manEm.ShowDialog();
         }
 
